@@ -9,7 +9,7 @@ const commands = {
 - 🚀 projects   : Key projects
 - 📬 contact    : Contact info`, class: "info" },
 
-  about: { text: `👩‍💻 🙋 Hi! I'm Pooja Baranwal, Backend Engineer with 11 years of experience in designing and developing scalable, high-performance, and secure software systems.`, class: "about" },
+  about: { text: `👩‍💻 🙋 Hi! I'm Pooja Baranwal, Backend Engineer with 12 years of experience in designing and developing scalable, high-performance, and secure software systems.`, class: "about" },
 
   skills: { text: `🛠️ Technical Skills:
 - 💻 Languages: Java, Spring Boot, Spring MVC, Hibernate, ReactJS (basic)
