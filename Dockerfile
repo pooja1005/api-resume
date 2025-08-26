@@ -1,24 +1,26 @@
-# Use official Java 21 JDK base image
-FROM eclipse-temurin:21-jdk
+# ---- Build stage ----
+FROM amazoncorretto:21-alpine AS build
 
-# Set working directory
 WORKDIR /app
 
-# Copy Maven wrapper and pom first (for caching)
+# Copy Maven wrapper + pom first (for dependency caching)
 COPY mvnw* pom.xml ./
 COPY .mvn .mvn
+
+# Make mvnw executable (important in Alpine)
+RUN chmod +x mvnw
 
 # Download dependencies
 RUN ./mvnw dependency:go-offline
 
-# Copy all source
+# Copy the source code
 COPY src src
 
 # Build the app
 RUN ./mvnw clean package -DskipTests
 
 # ---- Run stage ----
-FROM eclipse-temurin:21-jre
+FROM amazoncorretto:21-alpine
 
 WORKDIR /app
 
