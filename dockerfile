@@ -17,5 +17,13 @@ COPY src src
 # Build the app
 RUN ./mvnw clean package -DskipTests
 
+# ---- Run stage ----
+FROM eclipse-temurin:21-jre
+
+WORKDIR /app
+
+# Copy jar from build stage
+COPY --from=build /app/target/*.jar app.jar
+
 # Run the Spring Boot jar
-CMD ["java", "-jar", "target/api-resume-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-jar","/app/app.jar"]
