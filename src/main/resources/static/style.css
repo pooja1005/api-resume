@@ -1,25 +1,72 @@
 body {
-    background-color: black;
-    color: #00FF00;
-    font-family: monospace;
-    margin: 0;
-    padding: 20px;
+  background: #0d0d0d;
+  color: #00ffea;
+  font-family: 'Fira Code', monospace;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #terminal {
-    max-width: 800px;
-    margin: auto;
+  width: 90%;
+  max-width: 1100px;
+  height: 80%;
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(15, 15, 15, 0.9);
+  box-shadow: 0 0 25px #00ffea88;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  display: flex;
+  flex-direction: column;
+}
+
+#output div {
+  margin-bottom: 6px;       /* less space between lines */
+  line-height: 1.3em;
+  opacity: 0;
+  transform: translateY(6px);
+  animation: fadeInUp 0.3s forwards;
 }
 
 #input-line {
-    display: flex;
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+}
+
+#prompt {
+  color: #39ff14;
+  margin-right: 8px;
 }
 
 #command {
-    background: none;
-    border: none;
-    color: #00FF00;
-    flex: 1;
-    font-family: monospace;
-    outline: none;
+  flex-grow: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+/* Types of outputs */
+.err { color: #ff3b3b; }
+.ok { color: #39ff14; }
+.info { color: #00bfff; }
+
+.about { color: #00eaff; }
+.skills { color: #ffe600; }
+.experience { color: #ff9933; }
+.projects { color: #ff4fd8; }
+.contact { color: #39ff14; }
+.logs { color: #00aaff; }
+.deploy { color: #a66bff; }
+
+/* Animation */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
 }
