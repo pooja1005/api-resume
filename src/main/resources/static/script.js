@@ -3,19 +3,16 @@ const input = document.getElementById("command");
 
 const commands = {
   help: { text: `⚡ Available commands:
-- 💁 about      : Who I am
+- 💁 about      : Who am I
 - 🛠 skills     : My technical skills
 - 💼 experience : Work history
 - 🚀 projects   : Key projects
-- 📬 contact    : Contact info
-- 📜 logs       : Show recent server logs
-- ⚡ deploy     : Deploy interactive resume
-- 🧹 clear      : Clear the terminal`, class: "info" },
+- 📬 contact    : Contact info`, class: "info" },
 
-  about: { text: `👩‍💻 🙋 Hi! I'm <span class='highlight'>Pooja Baranwal</span>, Backend Engineer with 11 years of experience in designing and developing <span class='ok'>scalable</span>, <span class='ok'>high-performance</span>, and <span class='ok'>secure</span> software systems.`, class: "about" },
+  about: { text: `👩‍💻 🙋 Hi! I'm Pooja Baranwal, Backend Engineer with 11 years of experience in designing and developing scalable, high-performance, and secure software systems.`, class: "about" },
 
   skills: { text: `🛠️ Technical Skills:
-- 💻 Languages: <span class='highlight'>Java</span>, Spring Boot, Spring MVC, Hibernate, ReactJS (basic)
+- 💻 Languages: Java, Spring Boot, Spring MVC, Hibernate, ReactJS (basic)
 - 📚 Frameworks: Spring Boot, Hibernate
 - ⚙️ DevOps: Docker, Jenkins, Git, CI/CD Pipelines, Jira, IntelliJ, Eclipse, Azure
 - 🧠 Concepts: System design, Multithreading, Algorithms, Data Structures, Reactive Programming
